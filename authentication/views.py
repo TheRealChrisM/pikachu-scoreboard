@@ -15,3 +15,7 @@ def login_team(request):
             return redirect('login')
     else:
         return render(request, 'login.html', {})
+
+def logout_team(request):
+    logout(request)
+    return redirect('login')
