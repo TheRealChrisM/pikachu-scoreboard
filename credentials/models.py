@@ -21,4 +21,5 @@ class Credential(models.Model):
     password = models.CharField(max_length=200)
 
     def get_absolute_url(self):
-        return reverse('cred-detail', args=(str(self.id)))
+        print(str(self.id))
+        return reverse('cred')
