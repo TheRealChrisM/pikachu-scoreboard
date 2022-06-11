@@ -17,4 +17,4 @@ class CredentialDetailView(DetailView):
 class CredentialEditView(UpdateView):
     model = Credential
     template_name = "credential_edit.html"
-    fields = ['password']
+    fields = ['username','password']
