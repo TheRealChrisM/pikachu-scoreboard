@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{% if user.is_authenticated %}
+<h1>Howdy, {{ user.username }}! 🤠</h1>
+Service Name | Team Number | Status | Message <br>
+{% for service in object_list %}
+    
+    {{ service.service_name }} | Team {{ service.team_id}} | {{ service.status }} | {{ service.message }}
+    <br>
+{% endfor %}
+{% else %}
+<h1> Sorry you must be logged in to view this page!</h1>
+<a href="{% url 'login' %}">Login Here!</a>
+{% endif %}
+</html>
